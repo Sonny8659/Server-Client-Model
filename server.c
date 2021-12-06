@@ -17,31 +17,6 @@
 #define USER2_ID     "user2"
 #define USER2_PW     "passwd2"
 
-/*=================================socket structures============================================*/
-struct sockaddr {
-    u_char      sa_len;
-    u_short     sa_family       // address family. AF_xxx
-    char        sa_data[14];    // 14 bytes of protocol address
-};
-
-struct sockaddr_in {
-    u_char      sin_len;
-    u_short     sin_family;
-    u_short     sin_port;
-    struct      in_addr sin_addr;
-    char        sin_zero[8];
-};
-
-struct in_addr {
-    union {
-        struct { u_char s_b1, s_b2, s_b3, s_b4;} S_un_b;    //4바이트
-        struct { u_short s_w1, s_w2; } S_un_w;              //4바이트
-        u_long S_addr;  // 4바이트
-    }S_un;
-};
-/*========================================end====================================================*/
-
-
 int main(void)
 {
     /* listen on sock_fd, new connection on new_fd */

@@ -10,30 +10,6 @@
 #define SERV_IP "220.149.128.100"
 #define SERV_PORT   4530
 
-/*=================================socket structures============================================*/
-struct sockaddr {
-    u_char      sa_len;
-    u_short     sa_family       // address family. AF_xxx
-    char        sa_data[14];    // 14 bytes of protocol address
-};
-
-struct sockaddr_in {
-    u_char      sin_len;
-    u_short     sin_family;
-    u_short     sin_port;
-    struct      in_addr sin_addr;
-    char        sin_zero[8];
-};
-
-struct in_addr {
-    union {
-        struct { u_char s_b1, s_b2, s_b3, s_b4;} S_un_b;    //4바이트
-        struct { u_short s_w1, s_w2; } S_un_w;              //4바이트
-        u_long S_addr;  // 4바이트
-    }S_un;
-};
-/*========================================end====================================================*/
-
 int main(int argc, char *argv [  ])
 {
     int sockfd; // will hold the destination addr
