@@ -77,7 +77,7 @@ int main(void)
     // listen
     if(listen(sockfd, BACKLOG) == -1)
     {
-        PERROR("listen() error lol!");
+        perror("listen() error lol!");
         exit(1);
     }
     else printf("listen() is OK...\n\n");
