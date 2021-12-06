@@ -8,7 +8,7 @@
 #include <arpa/inet.h>
 
 #define SERV_IP "220.149.128.100"
-#define SERV_PORT   4000
+#define SERV_PORT   4530
 #define BACKLOG     10
 
 #define INIT_MSG    "==============\nHello! I'm P2P File Sharing Server... \nPlease, LOG-IN!=========================\n"

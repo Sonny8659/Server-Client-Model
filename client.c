@@ -8,7 +8,7 @@
 #include <arpa/inet.h>
 
 #define SERV_IP "220.149.128.100"
-#define SERV_PORT   4000
+#define SERV_PORT   4530
 
 /*=================================socket structures============================================*/
 struct sockaddr {
